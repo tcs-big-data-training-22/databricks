@@ -16,6 +16,7 @@ databricks configure --token
 
 - Enter your workspace URL, with the format https://<instance-name>.cloud.databricks.com.
   - Sample: https://adb-76115208643438.18.azuredatabricks.net
+  - Credentials: u1@atintrainermctgmail.onmicrosoft.com / My Training Pwd
 - When prompted, specify the token
   - Sample Token: dapi40cf9366---------7eaaf44e97ac843-2
 
