@@ -1,21 +1,51 @@
-# How to setup databricks CLI
+## How to setup databricks CLI
 ```
 conda install -c conda-forge databricks-cli
+#OR
+python3 -m venv ~/my_venv_python
+source ~/my_venv_python/bin/activate
+pip install databricks-cli
 ```
+
+## Alternatively we can run below commands on Azure CLI
+- Open Azure CLI and click Create Storage if prompted
 
 ```
 databricks configure --token
 ```
 
 - Enter your workspace URL, with the format https://<instance-name>.cloud.databricks.com.
-  - Sample: https://adb-8190330192940305.5.azuredatabricks.net
+  - Sample: https://adb-76115208643438.18.azuredatabricks.net
 - When prompted, specify the token
-  - Sample Token: dapi83c3625d306c7199df36322dd56fb7d4
+  - Sample Token: dapi40cf9366---------7eaaf44e97ac843-2
 
 - Check the configuration on windows:
 ```
 type %USERPROFILE%\.databrickscfg
+cat ~/.databrickscfg
 ```
+
+
+- List files in DBFS
+```
+dbfs ls
+```
+
+
+- Put local file ./apple.txt to dbfs:/apple.txt
+```
+touch apple.txt
+echo "My Apple"
+dbfs cp ./apple.txt dbfs:/apple.txt
+```
+
+
+- Get dbfs:/apple.txt and save to local file ./apple.txt
+```
+dbfs cp dbfs:/apple.txt ./apple_2.txt
+ls a*
+```
+
 
 - Run various databricks cli commands:
 ```
