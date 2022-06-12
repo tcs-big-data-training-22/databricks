@@ -58,6 +58,9 @@ databricks workspace ls
 ## Create databricks cluster using CLI
 - Create cluster:
 ```
+cd
+git clone https://github.com/tcs-big-data-training-22/databricks
+cd ~/databricks/02-Databricks-REST-CLI
 databricks clusters create --json-file create-cluster.json
 ```
 
